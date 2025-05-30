@@ -1,11 +1,22 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
+const path = require("path");
+const connectDb = require("./db/db");
+const products = require("./data/products");
 
+app.use(cors());
+const port = 8000;
 
-app.get("/",function(req,res){
-    console.log("This is started");
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use("/assets", express.static(path.join(__dirname, "assets")));
+connectDb();
+
+app.get("/products",function(req,res){
+    res.send(products);
 });
 
-app.listen(3000,function(req,res){
-    console.log("server started");
-});
+app.listen(port,function(req,res){
+    console.log("server connected"+ " ",port);
+})
