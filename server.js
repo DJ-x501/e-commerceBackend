@@ -19,10 +19,6 @@ app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use("/user",router);
 
 
-app.get("/products",function(req,res){
-    res.send(products);
-});
-
 const port = process.env.PORT;
 
 app.listen(port, async function(req,res){

@@ -10,10 +10,10 @@ async function createUser(req,res){
         if(!email||!password){
             return res.status(404).json({success:false,message:"enter email and password"});
         }
-        const user = await User.findOne({email});
-        if(user){
-            return res.status(400).json({success:false,message:"User already exist"});
-        }
+        // const user = await User.findOne({email});
+        // if(user){
+        //     return res.status(400).json({success:false,message:"User already exist"});
+        // }
 
         const newUser = await User.create({
             email,password

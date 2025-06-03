@@ -4,18 +4,21 @@ const products = [
     price: "199 Rs",
     description: "Gentle. Nourishing. Pure.",
     image: "/assets/shampoo.png",
+    id:1
   },
   {
     name: "Goose Soap Bar",
     price: "99 Rs",
     description: "Handcrafted Comfort in Every Wash.",
     image: "/assets/soap.png",
+    id:2
   },
   {
     name: "Goose Oil",
     price: "169 Rs",
     description: "Versatile Hydration, Naturally Bottled.",
     image: "/assets/oil.png",
+    id:3
   },
   {
     name: "Goose Shampoo",
