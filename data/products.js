@@ -25,6 +25,7 @@ const products = [
     price: "199 Rs",
     description: "Gentle. Nourishing. Pure.",
     image: "/assets/shampoo.png",
+    
   },
   {
     name: "Goose Soap Bar",
